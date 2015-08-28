@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184DF6881B9026A40078D796 /* NYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DF6871B9026A40078D796 /* NYTabBarController.m */; };
 		189419AB1B8F22B7006BF095 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419AA1B8F22B7006BF095 /* main.m */; };
 		189419AE1B8F22B7006BF095 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419AD1B8F22B7006BF095 /* AppDelegate.m */; };
-		189419B11B8F22B7006BF095 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419B01B8F22B7006BF095 /* ViewController.m */; };
-		189419B41B8F22B7006BF095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189419B21B8F22B7006BF095 /* Main.storyboard */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
-		189419B91B8F22B7006BF095 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189419B71B8F22B7006BF095 /* LaunchScreen.xib */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
+		18BD84D31B9036F40040C0CE /* NYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D21B9036F40040C0CE /* NYHomeViewController.m */; };
+		18BD84D61B9037160040C0CE /* NYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D51B9037160040C0CE /* NYMessageViewController.m */; };
+		18BD84D91B90372B0040C0CE /* NYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D81B90372B0040C0CE /* NYProfileViewController.m */; };
+		18BD84DC1B9037450040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +29,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184DF6861B9026A40078D796 /* NYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTabBarController.h; sourceTree = "<group>"; };
+		184DF6871B9026A40078D796 /* NYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTabBarController.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419A91B8F22B7006BF095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189419AA1B8F22B7006BF095 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		189419AC1B8F22B7006BF095 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189419AD1B8F22B7006BF095 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		189419AF1B8F22B7006BF095 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		189419B01B8F22B7006BF095 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		189419B31B8F22B7006BF095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		189419B81B8F22B7006BF095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419C31B8F22B7006BF095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189419C41B8F22B7006BF095 /* WeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiBoTests.m; sourceTree = "<group>"; };
+		18BD84D11B9036F40040C0CE /* NYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHomeViewController.h; sourceTree = "<group>"; };
+		18BD84D21B9036F40040C0CE /* NYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHomeViewController.m; sourceTree = "<group>"; };
+		18BD84D41B9037160040C0CE /* NYMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMessageViewController.h; sourceTree = "<group>"; };
+		18BD84D51B9037160040C0CE /* NYMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMessageViewController.m; sourceTree = "<group>"; };
+		18BD84D71B90372B0040C0CE /* NYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYProfileViewController.h; sourceTree = "<group>"; };
+		18BD84D81B90372B0040C0CE /* NYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYProfileViewController.m; sourceTree = "<group>"; };
+		18BD84DA1B9037450040C0CE /* NYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYDiscoverViewController.h; sourceTree = "<group>"; };
+		18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYDiscoverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +91,16 @@
 			children = (
 				189419AC1B8F22B7006BF095 /* AppDelegate.h */,
 				189419AD1B8F22B7006BF095 /* AppDelegate.m */,
-				189419AF1B8F22B7006BF095 /* ViewController.h */,
-				189419B01B8F22B7006BF095 /* ViewController.m */,
-				189419B21B8F22B7006BF095 /* Main.storyboard */,
-				189419B51B8F22B7006BF095 /* Images.xcassets */,
-				189419B71B8F22B7006BF095 /* LaunchScreen.xib */,
+				184DF6861B9026A40078D796 /* NYTabBarController.h */,
+				184DF6871B9026A40078D796 /* NYTabBarController.m */,
+				18BD84D11B9036F40040C0CE /* NYHomeViewController.h */,
+				18BD84D21B9036F40040C0CE /* NYHomeViewController.m */,
+				18BD84D41B9037160040C0CE /* NYMessageViewController.h */,
+				18BD84D51B9037160040C0CE /* NYMessageViewController.m */,
+				18BD84DA1B9037450040C0CE /* NYDiscoverViewController.h */,
+				18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */,
+				18BD84D71B90372B0040C0CE /* NYProfileViewController.h */,
+				18BD84D81B90372B0040C0CE /* NYProfileViewController.m */,
 				189419A81B8F22B7006BF095 /* Supporting Files */,
 			);
 			path = WeiBo;
@@ -96,6 +109,7 @@
 		189419A81B8F22B7006BF095 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				189419B51B8F22B7006BF095 /* Images.xcassets */,
 				189419A91B8F22B7006BF095 /* Info.plist */,
 				189419AA1B8F22B7006BF095 /* main.m */,
 			);
@@ -163,6 +177,7 @@
 		1894199D1B8F22B7006BF095 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NY;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
@@ -199,8 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189419B41B8F22B7006BF095 /* Main.storyboard in Resources */,
-				189419B91B8F22B7006BF095 /* LaunchScreen.xib in Resources */,
 				189419B61B8F22B7006BF095 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189419B11B8F22B7006BF095 /* ViewController.m in Sources */,
+				18BD84D31B9036F40040C0CE /* NYHomeViewController.m in Sources */,
+				18BD84D61B9037160040C0CE /* NYMessageViewController.m in Sources */,
+				184DF6881B9026A40078D796 /* NYTabBarController.m in Sources */,
+				18BD84D91B90372B0040C0CE /* NYProfileViewController.m in Sources */,
 				189419AE1B8F22B7006BF095 /* AppDelegate.m in Sources */,
+				18BD84DC1B9037450040C0CE /* NYDiscoverViewController.m in Sources */,
 				189419AB1B8F22B7006BF095 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +259,6 @@
 			targetProxy = 189419BF1B8F22B7006BF095 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		189419B21B8F22B7006BF095 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				189419B31B8F22B7006BF095 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		189419B71B8F22B7006BF095 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				189419B81B8F22B7006BF095 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		189419C61B8F22B7006BF095 /* Debug */ = {
@@ -347,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +416,7 @@
 				189419CA1B8F22B7006BF095 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189419CB1B8F22B7006BF095 /* Build configuration list for PBXNativeTarget "WeiBoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				189419CD1B8F22B7006BF095 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
