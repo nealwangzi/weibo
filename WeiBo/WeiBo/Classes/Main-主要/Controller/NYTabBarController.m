@@ -11,18 +11,35 @@
 #import "NYMessageViewController.h"
 #import "NYDiscoverViewController.h"
 #import "NYProfileViewController.h"
-
+#import "NYTabBar.h"
 @interface NYTabBarController ()
 
 @end
 
 @implementation NYTabBarController
 
++ (void)initialize
+{
+    
+    UITabBarItem *tabBaritem = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [tabBaritem setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    
+    NSMutableDictionary *selattrs = [NSMutableDictionary dictionary];
+    selattrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [tabBaritem setTitleTextAttributes:selattrs forState:UIControlStateSelected];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupChildrenVC];
+    [self setupTabBar];
 }
-
+- (void)setupTabBar
+{
+    [self setValue:[[NYTabBar alloc]init] forKeyPath:@"tabBar"];
+}
 - (void)setupChildrenVC
 {
     NYHomeViewController *home = [[NYHomeViewController alloc]init];
@@ -42,7 +59,7 @@
 {
     vc.title = titlename;
     vc.tabBarItem.image = image;
-    vc.tabBarItem.selectedImage = selimage;
+    vc.tabBarItem.selectedImage = [selimage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [self addChildViewController:vc];
 }
 @end

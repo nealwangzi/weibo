@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184DF6881B9026A40078D796 /* NYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DF6871B9026A40078D796 /* NYTabBarController.m */; };
-		189419AB1B8F22B7006BF095 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419AA1B8F22B7006BF095 /* main.m */; };
-		189419AE1B8F22B7006BF095 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419AD1B8F22B7006BF095 /* AppDelegate.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
-		18BD84D31B9036F40040C0CE /* NYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D21B9036F40040C0CE /* NYHomeViewController.m */; };
-		18BD84D61B9037160040C0CE /* NYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D51B9037160040C0CE /* NYMessageViewController.m */; };
-		18BD84D91B90372B0040C0CE /* NYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84D81B90372B0040C0CE /* NYProfileViewController.m */; };
-		18BD84DC1B9037450040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */; };
+		18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */; };
+		18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E71B908C590040C0CE /* NYHomeViewController.m */; };
+		18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84ED1B908C590040C0CE /* NYTabBarController.m */; };
+		18BD85041B908C590040C0CE /* NYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84F31B908C590040C0CE /* NYMessageViewController.m */; };
+		18BD85051B908C590040C0CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84F81B908C590040C0CE /* AppDelegate.m */; };
+		18BD85071B908C590040C0CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84FA1B908C590040C0CE /* main.m */; };
+		18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84FE1B908C590040C0CE /* NYProfileViewController.m */; };
+		18BD850A1B908C8B0040C0CE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BD85091B908C8B0040C0CE /* Info.plist */; };
+		18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD850C1B908EA40040C0CE /* NYTabBar.m */; };
+		18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD85101B9090830040C0CE /* UIView+NYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,25 +32,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		184DF6861B9026A40078D796 /* NYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTabBarController.h; sourceTree = "<group>"; };
-		184DF6871B9026A40078D796 /* NYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTabBarController.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		189419A91B8F22B7006BF095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189419AA1B8F22B7006BF095 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		189419AC1B8F22B7006BF095 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		189419AD1B8F22B7006BF095 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419C31B8F22B7006BF095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189419C41B8F22B7006BF095 /* WeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiBoTests.m; sourceTree = "<group>"; };
-		18BD84D11B9036F40040C0CE /* NYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHomeViewController.h; sourceTree = "<group>"; };
-		18BD84D21B9036F40040C0CE /* NYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHomeViewController.m; sourceTree = "<group>"; };
-		18BD84D41B9037160040C0CE /* NYMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMessageViewController.h; sourceTree = "<group>"; };
-		18BD84D51B9037160040C0CE /* NYMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMessageViewController.m; sourceTree = "<group>"; };
-		18BD84D71B90372B0040C0CE /* NYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYProfileViewController.h; sourceTree = "<group>"; };
-		18BD84D81B90372B0040C0CE /* NYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYProfileViewController.m; sourceTree = "<group>"; };
-		18BD84DA1B9037450040C0CE /* NYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYDiscoverViewController.h; sourceTree = "<group>"; };
-		18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYDiscoverViewController.m; sourceTree = "<group>"; };
+		18BD84E01B908C590040C0CE /* NYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYDiscoverViewController.h; sourceTree = "<group>"; };
+		18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYDiscoverViewController.m; sourceTree = "<group>"; };
+		18BD84E61B908C590040C0CE /* NYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHomeViewController.h; sourceTree = "<group>"; };
+		18BD84E71B908C590040C0CE /* NYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHomeViewController.m; sourceTree = "<group>"; };
+		18BD84EC1B908C590040C0CE /* NYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTabBarController.h; sourceTree = "<group>"; };
+		18BD84ED1B908C590040C0CE /* NYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTabBarController.m; sourceTree = "<group>"; };
+		18BD84F21B908C590040C0CE /* NYMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMessageViewController.h; sourceTree = "<group>"; };
+		18BD84F31B908C590040C0CE /* NYMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMessageViewController.m; sourceTree = "<group>"; };
+		18BD84F71B908C590040C0CE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18BD84F81B908C590040C0CE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18BD84FA1B908C590040C0CE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18BD84FD1B908C590040C0CE /* NYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYProfileViewController.h; sourceTree = "<group>"; };
+		18BD84FE1B908C590040C0CE /* NYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYProfileViewController.m; sourceTree = "<group>"; };
+		18BD85091B908C8B0040C0CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BD850B1B908EA40040C0CE /* NYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTabBar.h; sourceTree = "<group>"; };
+		18BD850C1B908EA40040C0CE /* NYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTabBar.m; sourceTree = "<group>"; };
+		18BD850F1B9090830040C0CE /* UIView+NYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NYExtension.h"; sourceTree = "<group>"; };
+		18BD85101B9090830040C0CE /* UIView+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NYExtension.m"; sourceTree = "<group>"; };
+		18BD85131B9090E60040C0CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Classes/Other/PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,18 +97,7 @@
 		189419A71B8F22B7006BF095 /* WeiBo */ = {
 			isa = PBXGroup;
 			children = (
-				189419AC1B8F22B7006BF095 /* AppDelegate.h */,
-				189419AD1B8F22B7006BF095 /* AppDelegate.m */,
-				184DF6861B9026A40078D796 /* NYTabBarController.h */,
-				184DF6871B9026A40078D796 /* NYTabBarController.m */,
-				18BD84D11B9036F40040C0CE /* NYHomeViewController.h */,
-				18BD84D21B9036F40040C0CE /* NYHomeViewController.m */,
-				18BD84D41B9037160040C0CE /* NYMessageViewController.h */,
-				18BD84D51B9037160040C0CE /* NYMessageViewController.m */,
-				18BD84DA1B9037450040C0CE /* NYDiscoverViewController.h */,
-				18BD84DB1B9037450040C0CE /* NYDiscoverViewController.m */,
-				18BD84D71B90372B0040C0CE /* NYProfileViewController.h */,
-				18BD84D81B90372B0040C0CE /* NYProfileViewController.m */,
+				18BD84DD1B908C590040C0CE /* Classes */,
 				189419A81B8F22B7006BF095 /* Supporting Files */,
 			);
 			path = WeiBo;
@@ -110,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				189419B51B8F22B7006BF095 /* Images.xcassets */,
-				189419A91B8F22B7006BF095 /* Info.plist */,
-				189419AA1B8F22B7006BF095 /* main.m */,
+				18BD85091B908C8B0040C0CE /* Info.plist */,
+				18BD85131B9090E60040C0CE /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,6 +128,206 @@
 				189419C31B8F22B7006BF095 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18BD84DD1B908C590040C0CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84E41B908C590040C0CE /* Home-主页 */,
+				18BD84F01B908C590040C0CE /* Message-消息 */,
+				18BD84DE1B908C590040C0CE /* Discover-发现 */,
+				18BD84FB1B908C590040C0CE /* Profile-我 */,
+				18BD84EA1B908C590040C0CE /* Main-主要 */,
+				18BD84F61B908C590040C0CE /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		18BD84DE1B908C590040C0CE /* Discover-发现 */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84DF1B908C590040C0CE /* Controller */,
+				18BD84E21B908C590040C0CE /* Model */,
+				18BD84E31B908C590040C0CE /* View */,
+			);
+			path = "Discover-发现";
+			sourceTree = "<group>";
+		};
+		18BD84DF1B908C590040C0CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84E01B908C590040C0CE /* NYDiscoverViewController.h */,
+				18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BD84E21B908C590040C0CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD84E31B908C590040C0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BD84E41B908C590040C0CE /* Home-主页 */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84E51B908C590040C0CE /* Controller */,
+				18BD84E81B908C590040C0CE /* Model */,
+				18BD84E91B908C590040C0CE /* View */,
+			);
+			path = "Home-主页";
+			sourceTree = "<group>";
+		};
+		18BD84E51B908C590040C0CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84E61B908C590040C0CE /* NYHomeViewController.h */,
+				18BD84E71B908C590040C0CE /* NYHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BD84E81B908C590040C0CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD84E91B908C590040C0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BD84EA1B908C590040C0CE /* Main-主要 */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84EB1B908C590040C0CE /* Controller */,
+				18BD84EE1B908C590040C0CE /* Model */,
+				18BD84EF1B908C590040C0CE /* View */,
+			);
+			path = "Main-主要";
+			sourceTree = "<group>";
+		};
+		18BD84EB1B908C590040C0CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84EC1B908C590040C0CE /* NYTabBarController.h */,
+				18BD84ED1B908C590040C0CE /* NYTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BD84EE1B908C590040C0CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD84EF1B908C590040C0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18BD850B1B908EA40040C0CE /* NYTabBar.h */,
+				18BD850C1B908EA40040C0CE /* NYTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BD84F01B908C590040C0CE /* Message-消息 */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84F11B908C590040C0CE /* Controller */,
+				18BD84F41B908C590040C0CE /* Model */,
+				18BD84F51B908C590040C0CE /* View */,
+			);
+			path = "Message-消息";
+			sourceTree = "<group>";
+		};
+		18BD84F11B908C590040C0CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84F21B908C590040C0CE /* NYMessageViewController.h */,
+				18BD84F31B908C590040C0CE /* NYMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BD84F41B908C590040C0CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD84F51B908C590040C0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BD84F61B908C590040C0CE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				18BD850E1B9090690040C0CE /* Category */,
+				18BD84F71B908C590040C0CE /* AppDelegate.h */,
+				18BD84F81B908C590040C0CE /* AppDelegate.m */,
+				18BD84FA1B908C590040C0CE /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		18BD84FB1B908C590040C0CE /* Profile-我 */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84FC1B908C590040C0CE /* Controller */,
+				18BD84FF1B908C590040C0CE /* Model */,
+				18BD85001B908C590040C0CE /* View */,
+			);
+			path = "Profile-我";
+			sourceTree = "<group>";
+		};
+		18BD84FC1B908C590040C0CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BD84FD1B908C590040C0CE /* NYProfileViewController.h */,
+				18BD84FE1B908C590040C0CE /* NYProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18BD84FF1B908C590040C0CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD85001B908C590040C0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18BD850E1B9090690040C0CE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18BD850F1B9090830040C0CE /* UIView+NYExtension.h */,
+				18BD85101B9090830040C0CE /* UIView+NYExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD850A1B908C8B0040C0CE /* Info.plist in Resources */,
 				189419B61B8F22B7006BF095 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,13 +430,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BD84D31B9036F40040C0CE /* NYHomeViewController.m in Sources */,
-				18BD84D61B9037160040C0CE /* NYMessageViewController.m in Sources */,
-				184DF6881B9026A40078D796 /* NYTabBarController.m in Sources */,
-				18BD84D91B90372B0040C0CE /* NYProfileViewController.m in Sources */,
-				189419AE1B8F22B7006BF095 /* AppDelegate.m in Sources */,
-				18BD84DC1B9037450040C0CE /* NYDiscoverViewController.m in Sources */,
-				189419AB1B8F22B7006BF095 /* main.m in Sources */,
+				18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */,
+				18BD85071B908C590040C0CE /* main.m in Sources */,
+				18BD85041B908C590040C0CE /* NYMessageViewController.m in Sources */,
+				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
+				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
+				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,
+				18BD85051B908C590040C0CE /* AppDelegate.m in Sources */,
+				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
+				18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +546,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = WeiBo/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +559,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = WeiBo/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
