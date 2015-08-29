@@ -19,6 +19,7 @@
 		18BD850A1B908C8B0040C0CE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BD85091B908C8B0040C0CE /* Info.plist */; };
 		18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD850C1B908EA40040C0CE /* NYTabBar.m */; };
 		18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD85101B9090830040C0CE /* UIView+NYExtension.m */; };
+		18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD85151B90953A0040C0CE /* NYNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		18BD850F1B9090830040C0CE /* UIView+NYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NYExtension.h"; sourceTree = "<group>"; };
 		18BD85101B9090830040C0CE /* UIView+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NYExtension.m"; sourceTree = "<group>"; };
 		18BD85131B9090E60040C0CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Classes/Other/PrefixHeader.pch; sourceTree = "<group>"; };
+		18BD85141B90953A0040C0CE /* NYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYNavigationController.h; sourceTree = "<group>"; };
+		18BD85151B90953A0040C0CE /* NYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 			children = (
 				18BD84EC1B908C590040C0CE /* NYTabBarController.h */,
 				18BD84ED1B908C590040C0CE /* NYTabBarController.m */,
+				18BD85141B90953A0040C0CE /* NYNavigationController.h */,
+				18BD85151B90953A0040C0CE /* NYNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,
 				18BD85051B908C590040C0CE /* AppDelegate.m in Sources */,
 				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
+				18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */,
 				18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,19 +16,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupNavBar];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNavBar
+{
+   UIButton *leftButton = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] HighlightedImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"]title:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
+    UIButton *rightButton = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_pop"] HighlightedImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"]title:nil];
+    [rightButton addTarget:self action:@selector(rightbuttonClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+    UIButton *titleButtonView = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_arrow_down"] HighlightedImage:[UIImage imageNamed:@"navigationbar_arrow_up"]title:@"主页"];
+    
+    self.navigationItem.titleView = titleButtonView;
 }
+- (UIButton *)setupBarButtonWithImage:(UIImage *)image HighlightedImage:(UIImage *)highlightedImage title:(NSString *)titlename
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setImage:highlightedImage forState:UIControlStateHighlighted];
+    [button setTitle:titlename forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button sizeToFit];
+    return button;
 
+}
+- (void)rightbuttonClick
+{
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

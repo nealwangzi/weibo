@@ -12,6 +12,8 @@
 #import "NYDiscoverViewController.h"
 #import "NYProfileViewController.h"
 #import "NYTabBar.h"
+#import "NYNavigationController.h"
+
 @interface NYTabBarController ()
 
 @end
@@ -23,7 +25,7 @@
     
     UITabBarItem *tabBaritem = [UITabBarItem appearanceWhenContainedIn:self, nil];
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
     [tabBaritem setTitleTextAttributes:attrs forState:UIControlStateNormal];
     
@@ -60,6 +62,7 @@
     vc.title = titlename;
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = [selimage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [self addChildViewController:vc];
+    NYNavigationController *nav = [[NYNavigationController alloc]initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 @end

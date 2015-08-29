@@ -18,6 +18,8 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar_background"]];
+        
         UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self addSubview:plusButton];
         self.plusButton = plusButton;
