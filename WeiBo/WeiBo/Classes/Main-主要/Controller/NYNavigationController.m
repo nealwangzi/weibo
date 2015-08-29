@@ -19,10 +19,14 @@
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:self, nil];
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:20];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     [bar setTitleTextAttributes:attrs];
 
-    
+    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
+    NSMutableDictionary *itemattrs = [NSMutableDictionary dictionary];
+    itemattrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    itemattrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [item setTitleTextAttributes:itemattrs forState:UIControlStateNormal];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

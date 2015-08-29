@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 180575A21B91C577006C305C /* NYTitleViewButton.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180575A11B91C577006C305C /* NYTitleViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTitleViewButton.h; sourceTree = "<group>"; };
+		180575A21B91C577006C305C /* NYTitleViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTitleViewButton.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +211,8 @@
 		18BD84E91B908C590040C0CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180575A11B91C577006C305C /* NYTitleViewButton.h */,
+				180575A21B91C577006C305C /* NYTitleViewButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
 				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
 				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,
+				180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */,
 				18BD85051B908C590040C0CE /* AppDelegate.m in Sources */,
 				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
 				18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */,

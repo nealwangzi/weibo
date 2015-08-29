@@ -7,8 +7,10 @@
 //
 
 #import "NYHomeViewController.h"
-
+#import "NYTitleViewButton.h"
 @interface NYHomeViewController ()
+/* titlebuton */
+@property(nonatomic , weak) UIButton *selTitleButton;
 
 @end
 
@@ -25,7 +27,12 @@
     UIButton *rightButton = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_pop"] HighlightedImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"]title:nil];
     [rightButton addTarget:self action:@selector(rightbuttonClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-    UIButton *titleButtonView = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_arrow_down"] HighlightedImage:[UIImage imageNamed:@"navigationbar_arrow_up"]title:@"主页"];
+    NYTitleViewButton *titleButtonView = [NYTitleViewButton buttonWithType:UIButtonTypeCustom];
+    [titleButtonView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [titleButtonView setTitle:@"主页" forState:UIControlStateNormal];
+    [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+    [titleButtonView addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchDown];
     
     self.navigationItem.titleView = titleButtonView;
 }
@@ -45,6 +52,10 @@
     UIViewController *vc = [[UIViewController alloc]init];
     vc.view.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)titleButtonClick:(UIButton *)button
+{
+    button.selected = !button.selected;
 }
 #pragma mark - Table view data source
 
