@@ -10,6 +10,10 @@
 #import "NYTitleViewButton.h"
 #import "NYDropdownMenu.h"
 #import "NYDropdownMenuController.h"
+#import "NYAccount.h"
+#import "NYAccountTool.h"
+#import "NYHTTPSessionManager.h"
+
 @interface NYHomeViewController ()<NYDropdownMenuDelegate>
 /* titleview */
 @property(nonatomic , weak) NYTitleViewButton *titleButtonView;
@@ -21,6 +25,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavBar];
+    [self setupUserInfo];
+}
+- (void)setupUserInfo
+{
+    NYHTTPSessionManager *manager = [NYHTTPSessionManager manager];
+    
+    NYAccount *account = [NYAccountTool account];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+    
+    [manager GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(NSURLSessionDataTask * task, id responseObject) {
+        NSString *name = responseObject[@"name"];
+        [self.titleButtonView setTitle:name forState:UIControlStateNormal];
+        account.name = name;
+        [NYAccountTool saveAccount:account];
+        
+    } failure:^ (NSURLSessionDataTask * task, NSError * error) {
+        NYLog(@"%@",error);
+    }];
+    
 }
 - (void)setupNavBar
 {
@@ -31,7 +57,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
     NYTitleViewButton *titleButtonView = [NYTitleViewButton buttonWithType:UIButtonTypeCustom];
     [titleButtonView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [titleButtonView setTitle:@"主页" forState:UIControlStateNormal];
+   // [titleButtonView setTitle:@"主页" forState:UIControlStateNormal];
     [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
     [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
     [titleButtonView addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchDown];

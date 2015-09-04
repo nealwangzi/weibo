@@ -20,4 +20,7 @@
 /* 创建时间 */
 @property(nonatomic , strong) NSDate *created_time;
 
+/* 昵称 */
+@property(nonatomic , copy) NSString *name;
+
 @end
