@@ -13,23 +13,49 @@
 #import "NYAccount.h"
 #import "NYAccountTool.h"
 #import "NYHTTPSessionManager.h"
+#import <UIImageView+WebCache.h>
 
 @interface NYHomeViewController ()<NYDropdownMenuDelegate>
 /* titleview */
 @property(nonatomic , weak) NYTitleViewButton *titleButtonView;
+/* manager */
+@property(nonatomic , strong) NYHTTPSessionManager *manager;
+/* 微博内容 */
+@property(nonatomic , strong) NSArray *status;
 
 @end
 
 @implementation NYHomeViewController
+- (NYHTTPSessionManager *)manager
+{
+    if (_manager == nil) {
+        _manager = [NYHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavBar];
     [self setupUserInfo];
+    [self loadNewStatus];
+}
+- (void)loadNewStatus
+{
+    NYAccount *account = [NYAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+
+    [self.manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^ (NSURLSessionDataTask * task, id responseObject) {
+        self.status = responseObject[@"statuses"];
+        NSLog(@"%@",self.status);
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * task, NSError * error) {
+        
+    }];
 }
 - (void)setupUserInfo
 {
-    NYHTTPSessionManager *manager = [NYHTTPSessionManager manager];
     
     NYAccount *account = [NYAccountTool account];
     
@@ -37,7 +63,7 @@
     params[@"access_token"] = account.access_token;
     params[@"uid"] = account.uid;
     
-    [manager GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(NSURLSessionDataTask * task, id responseObject) {
+    [self.manager GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(NSURLSessionDataTask * task, id responseObject) {
         NSString *name = responseObject[@"name"];
         [self.titleButtonView setTitle:name forState:UIControlStateNormal];
         account.name = name;
@@ -86,70 +112,28 @@
 }
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.status.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"status"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"status"];
+    }
+    NSDictionary *status = self.status[indexPath.row];
+    NSDictionary *user = status[@"user"];
+    cell.textLabel.text = user[@"name"];
+    cell.detailTextLabel.text = status[@"text"];
     
-    // Configure the cell...
-    
+    // 设置头像
+    NSString *imageUrl = user[@"profile_image_url"];
+    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placehoder];
+
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
