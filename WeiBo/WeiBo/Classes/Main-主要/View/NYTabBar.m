@@ -7,7 +7,7 @@
 //
 
 #import "NYTabBar.h"
-
+#import "NYPublishViewController.h"
 @interface NYTabBar ()
 /* plusbutton */
 @property(nonatomic , weak) UIButton *plusButton;
@@ -34,6 +34,9 @@
 }
 - (void)plusButtonClick
 {
+    NYPublishViewController *publish = [[NYPublishViewController alloc]init];
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject] ;
+    [window.rootViewController presentViewController:publish animated:YES completion:nil];
 }
 - (void)layoutSubviews
 {
