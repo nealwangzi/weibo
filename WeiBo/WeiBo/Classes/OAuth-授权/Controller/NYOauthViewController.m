@@ -9,11 +9,10 @@
 #import "NYOauthViewController.h"
 #import "NYHTTPSessionManager.h"
 #import "NYAccount.h"
-#import <SVProgressHUD.h>
-#import "NYTabBarController.h"
-#import "NYNewFeatureViewController.h"
-#import <MJExtension.h>
 #import "NYAccountTool.h"
+
+#import <SVProgressHUD.h>
+#import <MJExtension.h>
 
 @interface NYOauthViewController ()<UIWebViewDelegate>
 
@@ -79,19 +78,9 @@
         
         [NSKeyedArchiver archiveRootObject:account toFile:path];
         
-        NSString *key = @"CFBundleVersion";
-        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        if ([lastVersion isEqualToString: currentVersion]) {
-            window.rootViewController = [[NYTabBarController alloc]init];
-        } else {
-    
-            window.rootViewController = [[NYNewFeatureViewController alloc]init];
-            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-        
+
+        [window switchRootViewController];
 
     } failure:^(NSURLSessionDataTask * task, NSError * error) {
         NSLog(@"请求失败,%@",error);
