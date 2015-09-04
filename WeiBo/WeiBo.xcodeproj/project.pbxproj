@@ -14,6 +14,10 @@
 		1819820B1B99F6FC0009AC79 /* NYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819820A1B99F6FC0009AC79 /* NYAccountTool.m */; };
 		1819820F1B99FA2B0009AC79 /* UIWindow+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819820E1B99FA2B0009AC79 /* UIWindow+NYExtension.m */; };
 		181982121B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982111B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m */; };
+		181982161B9A06CE0009AC79 /* NYStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982141B9A06CE0009AC79 /* NYStatusCell.m */; };
+		181982171B9A06CE0009AC79 /* NYStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181982151B9A06CE0009AC79 /* NYStatusCell.xib */; };
+		1819821A1B9A073A0009AC79 /* NYStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982191B9A073A0009AC79 /* NYStatus.m */; };
+		1819821D1B9A08CC0009AC79 /* NYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819821C1B9A08CC0009AC79 /* NYUser.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
@@ -64,6 +68,13 @@
 		1819820E1B99FA2B0009AC79 /* UIWindow+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+NYExtension.m"; sourceTree = "<group>"; };
 		181982101B9A014D0009AC79 /* UIBarButtonItem+NYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NYExtension.h"; sourceTree = "<group>"; };
 		181982111B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NYExtension.m"; sourceTree = "<group>"; };
+		181982131B9A06CE0009AC79 /* NYStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYStatusCell.h; sourceTree = "<group>"; };
+		181982141B9A06CE0009AC79 /* NYStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYStatusCell.m; sourceTree = "<group>"; };
+		181982151B9A06CE0009AC79 /* NYStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NYStatusCell.xib; sourceTree = "<group>"; };
+		181982181B9A073A0009AC79 /* NYStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYStatus.h; sourceTree = "<group>"; };
+		181982191B9A073A0009AC79 /* NYStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYStatus.m; sourceTree = "<group>"; };
+		1819821B1B9A08CC0009AC79 /* NYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYUser.h; sourceTree = "<group>"; };
+		1819821C1B9A08CC0009AC79 /* NYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYUser.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,6 +393,10 @@
 		18BD84E81B908C590040C0CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				181982181B9A073A0009AC79 /* NYStatus.h */,
+				181982191B9A073A0009AC79 /* NYStatus.m */,
+				1819821B1B9A08CC0009AC79 /* NYUser.h */,
+				1819821C1B9A08CC0009AC79 /* NYUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,6 +404,9 @@
 		18BD84E91B908C590040C0CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				181982131B9A06CE0009AC79 /* NYStatusCell.h */,
+				181982141B9A06CE0009AC79 /* NYStatusCell.m */,
+				181982151B9A06CE0009AC79 /* NYStatusCell.xib */,
 				180575A11B91C577006C305C /* NYTitleViewButton.h */,
 				180575A21B91C577006C305C /* NYTitleViewButton.m */,
 				189B04091B9976AE00BC57C6 /* NYDropdownMenu.h */,
@@ -622,6 +640,7 @@
 			files = (
 				189B04251B99858C00BC57C6 /* NYNewFeatureCell.xib in Resources */,
 				18BD850A1B908C8B0040C0CE /* Info.plist in Resources */,
+				181982171B9A06CE0009AC79 /* NYStatusCell.xib in Resources */,
 				189B04191B99806400BC57C6 /* NYPublishViewController.xib in Resources */,
 				189419B61B8F22B7006BF095 /* Images.xcassets in Resources */,
 				189B04101B997B6F00BC57C6 /* NYDropdownMenuController.xib in Resources */,
@@ -677,6 +696,7 @@
 			files = (
 				18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */,
 				1819820B1B99F6FC0009AC79 /* NYAccountTool.m in Sources */,
+				1819821A1B9A073A0009AC79 /* NYStatus.m in Sources */,
 				18BD85071B908C590040C0CE /* main.m in Sources */,
 				189B040F1B997B6F00BC57C6 /* NYDropdownMenuController.m in Sources */,
 				189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */,
@@ -695,7 +715,9 @@
 				18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */,
 				18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */,
 				189B04241B99858C00BC57C6 /* NYNewFeatureCell.m in Sources */,
+				181982161B9A06CE0009AC79 /* NYStatusCell.m in Sources */,
 				181982121B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m in Sources */,
+				1819821D1B9A08CC0009AC79 /* NYUser.m in Sources */,
 				189B04181B99806400BC57C6 /* NYPublishViewController.m in Sources */,
 				189B040B1B9976AE00BC57C6 /* NYDropdownMenu.m in Sources */,
 			);

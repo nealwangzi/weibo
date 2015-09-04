@@ -14,7 +14,11 @@
 #import "NYAccountTool.h"
 #import "NYHTTPSessionManager.h"
 #import <UIImageView+WebCache.h>
+#import <MJExtension.h>
+#import "NYStatusCell.h"
+#import "NYStatus.h"
 
+static NSString *const cell = @"status";
 @interface NYHomeViewController ()<NYDropdownMenuDelegate>
 /* titleview */
 @property(nonatomic , weak) NYTitleViewButton *titleButtonView;
@@ -39,6 +43,9 @@
     [self setupNavBar];
     [self setupUserInfo];
     [self loadNewStatus];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    [self.tableView registerNib:[UINib nibWithNibName:@"NYStatusCell" bundle:nil] forCellReuseIdentifier:cell];
 }
 - (void)loadNewStatus
 {
@@ -47,8 +54,8 @@
     params[@"access_token"] = account.access_token;
 
     [self.manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^ (NSURLSessionDataTask * task, id responseObject) {
-        self.status = responseObject[@"statuses"];
-        NSLog(@"%@",self.status);
+        self.status = [NYStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * task, NSError * error) {
         
@@ -120,20 +127,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"status"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"status"];
-    }
-    NSDictionary *status = self.status[indexPath.row];
-    NSDictionary *user = status[@"user"];
-    cell.textLabel.text = user[@"name"];
-    cell.detailTextLabel.text = status[@"text"];
-    
-    // 设置头像
-    NSString *imageUrl = user[@"profile_image_url"];
-    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placehoder];
-
+    NYStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"status"];
+    cell.status = self.status[indexPath.row];
     return cell;
+}
+- (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
 }
 @end
