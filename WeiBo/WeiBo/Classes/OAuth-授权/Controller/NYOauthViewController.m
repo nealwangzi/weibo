@@ -8,6 +8,12 @@
 
 #import "NYOauthViewController.h"
 #import "NYHTTPSessionManager.h"
+#import "NYAccount.h"
+#import <SVProgressHUD.h>
+#import "NYTabBarController.h"
+#import "NYNewFeatureViewController.h"
+#import <MJExtension.h>
+
 @interface NYOauthViewController ()<UIWebViewDelegate>
 
 @end
@@ -26,10 +32,11 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [SVProgressHUD dismiss];
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    
+    [SVProgressHUD showWithStatus:@"正在加载..."];
 }
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
@@ -59,12 +66,38 @@
 
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(NSURLSessionDataTask * task, id responseObject) {
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"请求成功,%@",dict);
+        [SVProgressHUD dismiss];
         
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+
+        NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
+        
+        NYAccount *account = [NYAccount objectWithKeyValues:dict];
+        NSLog(@"请求成功,%@",account);
+        [NSKeyedArchiver archiveRootObject:account toFile:path];
+        
+        NSString *key = @"CFBundleVersion";
+        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        if ([lastVersion isEqualToString: currentVersion]) {
+            window.rootViewController = [[NYTabBarController alloc]init];
+        } else {
+    
+            window.rootViewController = [[NYNewFeatureViewController alloc]init];
+            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
+
     } failure:^(NSURLSessionDataTask * task, NSError * error) {
         NSLog(@"请求失败,%@",error);
 
     }];
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [SVProgressHUD dismiss];
 }
 @end

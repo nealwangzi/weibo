@@ -10,6 +10,7 @@
 		180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 180575A21B91C577006C305C /* NYTitleViewButton.m */; };
 		181982011B998EAC0009AC79 /* NYOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982001B998EAC0009AC79 /* NYOauthViewController.m */; };
 		181982041B9992AA0009AC79 /* NYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */; };
+		181982071B99EFF60009AC79 /* NYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982061B99EFF60009AC79 /* NYAccount.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
@@ -52,6 +53,8 @@
 		181982001B998EAC0009AC79 /* NYOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYOauthViewController.m; sourceTree = "<group>"; };
 		181982021B9992AA0009AC79 /* NYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHTTPSessionManager.h; sourceTree = "<group>"; };
 		181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHTTPSessionManager.m; sourceTree = "<group>"; };
+		181982051B99EFF60009AC79 /* NYAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAccount.h; sourceTree = "<group>"; };
+		181982061B99EFF60009AC79 /* NYAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAccount.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +150,8 @@
 		181981FD1B998E790009AC79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				181982051B99EFF60009AC79 /* NYAccount.h */,
+				181982061B99EFF60009AC79 /* NYAccount.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 				189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */,
 				18BD85041B908C590040C0CE /* NYMessageViewController.m in Sources */,
 				181982011B998EAC0009AC79 /* NYOauthViewController.m in Sources */,
+				181982071B99EFF60009AC79 /* NYAccount.m in Sources */,
 				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
 				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
 				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,

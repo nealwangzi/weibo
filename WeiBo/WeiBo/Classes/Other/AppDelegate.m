@@ -10,6 +10,8 @@
 #import "NYTabBarController.h"
 #import "NYNewFeatureViewController.h"
 #import "NYOauthViewController.h"
+#import "NYAccount.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,19 +22,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    /**
-     获取当前版本
-     */
-//    NSString *key = @"CFBundleVersion";
-//    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-//    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-//    if (![lastVersion isEqualToString: currentVersion]) {
-//        self.window.rootViewController = [[NYTabBarController alloc]init];
-//    } else {
-//        
-//        self.window.rootViewController = [[NYNewFeatureViewController alloc]init];
-//    }
-    self.window.rootViewController = [[NYOauthViewController alloc]init];
+    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
+    NYAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    if (account) {
+        /**
+         获取当前版本
+         */
+        NSString *key = @"CFBundleVersion";
+        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+        if ([lastVersion isEqualToString: currentVersion]) {
+            self.window.rootViewController = [[NYTabBarController alloc]init];
+        } else {
+            
+            self.window.rootViewController = [[NYNewFeatureViewController alloc]init];
+        }
+    }else
+    {
+        self.window.rootViewController = [[NYOauthViewController alloc]init];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }
