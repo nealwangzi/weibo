@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewFeatureCell" id="gTV-IL-0wX" customClass="NYNewFeatureCell">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="488"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="488"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_feature_4" translatesAutoresizingMaskIntoConstraints="NO" id="sa4-wt-myg">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="488"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4q-Le-aFW">
+                        <rect key="frame" x="95" y="285" width="98" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="分享到微博" image="new_feature_share_false">
+                            <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" title="分享到微博" image="new_feature_share_true">
+                            <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" image="new_feature_share_false"/>
+                        <connections>
+                            <action selector="shareButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KsE-I1-4nk"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVC-Y0-Iue">
+                        <rect key="frame" x="91.5" y="352" width="105" height="36"/>
+                        <state key="normal" title="立即登录" backgroundImage="new_feature_finish_button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" title="立即登录" backgroundImage="new_feature_finish_button_highlighted"/>
+                        <connections>
+                            <action selector="loginButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Mjg-Yr-TPh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="sa4-wt-myg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="04z-pf-p1B"/>
+                <constraint firstAttribute="trailing" secondItem="sa4-wt-myg" secondAttribute="trailing" id="2yA-7b-08T"/>
+                <constraint firstAttribute="bottom" secondItem="CVC-Y0-Iue" secondAttribute="bottom" constant="100" id="4ML-Rn-IiF"/>
+                <constraint firstAttribute="centerX" secondItem="CVC-Y0-Iue" secondAttribute="centerX" id="Iv7-xR-xXy"/>
+                <constraint firstAttribute="bottom" secondItem="j4q-Le-aFW" secondAttribute="bottom" constant="180" id="KuU-jl-FGc"/>
+                <constraint firstAttribute="bottom" secondItem="sa4-wt-myg" secondAttribute="bottom" id="gdz-RS-jev"/>
+                <constraint firstAttribute="centerX" secondItem="j4q-Le-aFW" secondAttribute="centerX" id="j1g-10-wdN"/>
+                <constraint firstItem="sa4-wt-myg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nnR-yk-wrQ"/>
+            </constraints>
+            <size key="customSize" width="288" height="488"/>
+            <connections>
+                <outlet property="image_view" destination="sa4-wt-myg" id="iLt-LD-IEb"/>
+                <outlet property="loginButton" destination="CVC-Y0-Iue" id="3YZ-89-hJq"/>
+                <outlet property="shareButton" destination="j4q-Le-aFW" id="kHG-i6-JX9"/>
+            </connections>
+            <point key="canvasLocation" x="272" y="282"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="new_feature_4" width="320" height="480"/>
+        <image name="new_feature_finish_button" width="105" height="36"/>
+        <image name="new_feature_finish_button_highlighted" width="105" height="36"/>
+        <image name="new_feature_share_false" width="23" height="23"/>
+        <image name="new_feature_share_true" width="23" height="23"/>
+    </resources>
+</document>

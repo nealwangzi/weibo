@@ -16,6 +16,9 @@
 		189B04101B997B6F00BC57C6 /* NYDropdownMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189B040E1B997B6F00BC57C6 /* NYDropdownMenuController.xib */; };
 		189B04181B99806400BC57C6 /* NYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04161B99806400BC57C6 /* NYPublishViewController.m */; };
 		189B04191B99806400BC57C6 /* NYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189B04171B99806400BC57C6 /* NYPublishViewController.xib */; };
+		189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B041F1B99821F00BC57C6 /* NYNewFeatureViewController.m */; };
+		189B04241B99858C00BC57C6 /* NYNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04221B99858C00BC57C6 /* NYNewFeatureCell.m */; };
+		189B04251B99858C00BC57C6 /* NYNewFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189B04231B99858C00BC57C6 /* NYNewFeatureCell.xib */; };
 		18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */; };
 		18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E71B908C590040C0CE /* NYHomeViewController.m */; };
 		18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84ED1B908C590040C0CE /* NYTabBarController.m */; };
@@ -58,6 +61,11 @@
 		189B04151B99806400BC57C6 /* NYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYPublishViewController.h; sourceTree = "<group>"; };
 		189B04161B99806400BC57C6 /* NYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYPublishViewController.m; sourceTree = "<group>"; };
 		189B04171B99806400BC57C6 /* NYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NYPublishViewController.xib; sourceTree = "<group>"; };
+		189B041E1B99821F00BC57C6 /* NYNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYNewFeatureViewController.h; sourceTree = "<group>"; };
+		189B041F1B99821F00BC57C6 /* NYNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYNewFeatureViewController.m; sourceTree = "<group>"; };
+		189B04211B99858C00BC57C6 /* NYNewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYNewFeatureCell.h; sourceTree = "<group>"; };
+		189B04221B99858C00BC57C6 /* NYNewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYNewFeatureCell.m; sourceTree = "<group>"; };
+		189B04231B99858C00BC57C6 /* NYNewFeatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NYNewFeatureCell.xib; sourceTree = "<group>"; };
 		18BD84E01B908C590040C0CE /* NYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYDiscoverViewController.h; sourceTree = "<group>"; };
 		18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYDiscoverViewController.m; sourceTree = "<group>"; };
 		18BD84E61B908C590040C0CE /* NYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHomeViewController.h; sourceTree = "<group>"; };
@@ -201,9 +209,46 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		189B041A1B9981F500BC57C6 /* NewFeature-新特性 */ = {
+			isa = PBXGroup;
+			children = (
+				189B041B1B9981F500BC57C6 /* Controller */,
+				189B041C1B9981F500BC57C6 /* Model */,
+				189B041D1B9981F500BC57C6 /* View */,
+			);
+			path = "NewFeature-新特性";
+			sourceTree = "<group>";
+		};
+		189B041B1B9981F500BC57C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189B041E1B99821F00BC57C6 /* NYNewFeatureViewController.h */,
+				189B041F1B99821F00BC57C6 /* NYNewFeatureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		189B041C1B9981F500BC57C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		189B041D1B9981F500BC57C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				189B04211B99858C00BC57C6 /* NYNewFeatureCell.h */,
+				189B04221B99858C00BC57C6 /* NYNewFeatureCell.m */,
+				189B04231B99858C00BC57C6 /* NYNewFeatureCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18BD84DD1B908C590040C0CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				189B041A1B9981F500BC57C6 /* NewFeature-新特性 */,
 				189B04111B99804900BC57C6 /* Publish-发布 */,
 				18BD84E41B908C590040C0CE /* Home-主页 */,
 				18BD84F01B908C590040C0CE /* Message-消息 */,
@@ -505,6 +550,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189B04251B99858C00BC57C6 /* NYNewFeatureCell.xib in Resources */,
 				18BD850A1B908C8B0040C0CE /* Info.plist in Resources */,
 				189B04191B99806400BC57C6 /* NYPublishViewController.xib in Resources */,
 				189419B61B8F22B7006BF095 /* Images.xcassets in Resources */,
@@ -562,6 +608,7 @@
 				18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */,
 				18BD85071B908C590040C0CE /* main.m in Sources */,
 				189B040F1B997B6F00BC57C6 /* NYDropdownMenuController.m in Sources */,
+				189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */,
 				18BD85041B908C590040C0CE /* NYMessageViewController.m in Sources */,
 				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
 				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
@@ -572,6 +619,7 @@
 				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
 				18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */,
 				18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */,
+				189B04241B99858C00BC57C6 /* NYNewFeatureCell.m in Sources */,
 				189B04181B99806400BC57C6 /* NYPublishViewController.m in Sources */,
 				189B040B1B9976AE00BC57C6 /* NYDropdownMenu.m in Sources */,
 			);
