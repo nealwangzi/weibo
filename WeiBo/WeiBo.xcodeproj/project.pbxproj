@@ -11,6 +11,7 @@
 		181982011B998EAC0009AC79 /* NYOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982001B998EAC0009AC79 /* NYOauthViewController.m */; };
 		181982041B9992AA0009AC79 /* NYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */; };
 		181982071B99EFF60009AC79 /* NYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982061B99EFF60009AC79 /* NYAccount.m */; };
+		1819820B1B99F6FC0009AC79 /* NYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819820A1B99F6FC0009AC79 /* NYAccountTool.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
@@ -55,6 +56,8 @@
 		181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHTTPSessionManager.m; sourceTree = "<group>"; };
 		181982051B99EFF60009AC79 /* NYAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAccount.h; sourceTree = "<group>"; };
 		181982061B99EFF60009AC79 /* NYAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAccount.m; sourceTree = "<group>"; };
+		181982091B99F6FC0009AC79 /* NYAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAccountTool.h; sourceTree = "<group>"; };
+		1819820A1B99F6FC0009AC79 /* NYAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAccountTool.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +134,7 @@
 		181981FB1B998E790009AC79 /* OAuth-授权 */ = {
 			isa = PBXGroup;
 			children = (
+				181982081B99F6DA0009AC79 /* Tool */,
 				181981FC1B998E790009AC79 /* Controller */,
 				181981FD1B998E790009AC79 /* Model */,
 				181981FE1B998E790009AC79 /* View */,
@@ -161,6 +165,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		181982081B99F6DA0009AC79 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				181982091B99F6FC0009AC79 /* NYAccountTool.h */,
+				1819820A1B99F6FC0009AC79 /* NYAccountTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		1894199C1B8F22B7006BF095 = {
@@ -653,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BD850D1B908EA40040C0CE /* NYTabBar.m in Sources */,
+				1819820B1B99F6FC0009AC79 /* NYAccountTool.m in Sources */,
 				18BD85071B908C590040C0CE /* main.m in Sources */,
 				189B040F1B997B6F00BC57C6 /* NYDropdownMenuController.m in Sources */,
 				189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */,

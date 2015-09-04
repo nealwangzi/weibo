@@ -17,4 +17,7 @@
 /* uid */
 @property(nonatomic , copy) NSString *uid;
 
+/* 创建时间 */
+@property(nonatomic , strong) NSDate *created_time;
+
 @end

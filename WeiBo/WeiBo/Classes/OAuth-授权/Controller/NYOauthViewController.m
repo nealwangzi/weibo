@@ -13,6 +13,7 @@
 #import "NYTabBarController.h"
 #import "NYNewFeatureViewController.h"
 #import <MJExtension.h>
+#import "NYAccountTool.h"
 
 @interface NYOauthViewController ()<UIWebViewDelegate>
 
@@ -74,7 +75,8 @@
         NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
         
         NYAccount *account = [NYAccount objectWithKeyValues:dict];
-        NSLog(@"请求成功,%@",account);
+        [NYAccountTool saveAccount:account];
+        
         [NSKeyedArchiver archiveRootObject:account toFile:path];
         
         NSString *key = @"CFBundleVersion";

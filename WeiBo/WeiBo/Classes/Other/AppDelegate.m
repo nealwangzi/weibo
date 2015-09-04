@@ -11,7 +11,7 @@
 #import "NYNewFeatureViewController.h"
 #import "NYOauthViewController.h"
 #import "NYAccount.h"
-
+#import "NYAccountTool.h"
 @interface AppDelegate ()
 
 @end
@@ -22,9 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
-    NYAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+//    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
+//    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
+//    NYAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    NYAccount *account = [NYAccountTool account];
     if (account) {
         /**
          获取当前版本
