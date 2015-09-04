@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NYTabBarController.h"
 #import "NYNewFeatureViewController.h"
+#import "NYOauthViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,15 +23,16 @@
     /**
      获取当前版本
      */
-    NSString *key = @"CFBundleVersion";
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-    if (![lastVersion isEqualToString: currentVersion]) {
-        self.window.rootViewController = [[NYTabBarController alloc]init];
-    } else {
-        
-        self.window.rootViewController = [[NYNewFeatureViewController alloc]init];
-    }
+//    NSString *key = @"CFBundleVersion";
+//    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+//    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+//    if (![lastVersion isEqualToString: currentVersion]) {
+//        self.window.rootViewController = [[NYTabBarController alloc]init];
+//    } else {
+//        
+//        self.window.rootViewController = [[NYNewFeatureViewController alloc]init];
+//    }
+    self.window.rootViewController = [[NYOauthViewController alloc]init];
     [self.window makeKeyAndVisible];
     return YES;
 }

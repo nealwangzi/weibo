@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 180575A21B91C577006C305C /* NYTitleViewButton.m */; };
+		181982011B998EAC0009AC79 /* NYOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982001B998EAC0009AC79 /* NYOauthViewController.m */; };
+		181982041B9992AA0009AC79 /* NYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
@@ -46,6 +48,10 @@
 /* Begin PBXFileReference section */
 		180575A11B91C577006C305C /* NYTitleViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTitleViewButton.h; sourceTree = "<group>"; };
 		180575A21B91C577006C305C /* NYTitleViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTitleViewButton.m; sourceTree = "<group>"; };
+		181981FF1B998EAC0009AC79 /* NYOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYOauthViewController.h; sourceTree = "<group>"; };
+		181982001B998EAC0009AC79 /* NYOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYOauthViewController.m; sourceTree = "<group>"; };
+		181982021B9992AA0009AC79 /* NYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHTTPSessionManager.h; sourceTree = "<group>"; };
+		181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYHTTPSessionManager.m; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +123,39 @@
 				1CE2C0074D4D4082BC9B5767 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		181981FB1B998E790009AC79 /* OAuth-授权 */ = {
+			isa = PBXGroup;
+			children = (
+				181981FC1B998E790009AC79 /* Controller */,
+				181981FD1B998E790009AC79 /* Model */,
+				181981FE1B998E790009AC79 /* View */,
+			);
+			path = "OAuth-授权";
+			sourceTree = "<group>";
+		};
+		181981FC1B998E790009AC79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				181981FF1B998EAC0009AC79 /* NYOauthViewController.h */,
+				181982001B998EAC0009AC79 /* NYOauthViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		181981FD1B998E790009AC79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		181981FE1B998E790009AC79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1894199C1B8F22B7006BF095 = {
@@ -248,6 +287,7 @@
 		18BD84DD1B908C590040C0CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				181981FB1B998E790009AC79 /* OAuth-授权 */,
 				189B041A1B9981F500BC57C6 /* NewFeature-新特性 */,
 				189B04111B99804900BC57C6 /* Publish-发布 */,
 				18BD84E41B908C590040C0CE /* Home-主页 */,
@@ -412,6 +452,8 @@
 				18BD84F71B908C590040C0CE /* AppDelegate.h */,
 				18BD84F81B908C590040C0CE /* AppDelegate.m */,
 				18BD84FA1B908C590040C0CE /* main.m */,
+				181982021B9992AA0009AC79 /* NYHTTPSessionManager.h */,
+				181982031B9992AA0009AC79 /* NYHTTPSessionManager.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -610,10 +652,12 @@
 				189B040F1B997B6F00BC57C6 /* NYDropdownMenuController.m in Sources */,
 				189B04201B99821F00BC57C6 /* NYNewFeatureViewController.m in Sources */,
 				18BD85041B908C590040C0CE /* NYMessageViewController.m in Sources */,
+				181982011B998EAC0009AC79 /* NYOauthViewController.m in Sources */,
 				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
 				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
 				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,
 				189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */,
+				181982041B9992AA0009AC79 /* NYHTTPSessionManager.m in Sources */,
 				180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */,
 				18BD85051B908C590040C0CE /* AppDelegate.m in Sources */,
 				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
