@@ -13,7 +13,7 @@
 
 #import "UIView+NYExtension.h"
 #import "UIWindow+NYExtension.h"
-
+#import "UIBarButtonItem+NYExtension.h"
 #ifdef DEBUG // 处于开发阶段
 #define NYLog(...) NSLog(__VA_ARGS__)
 #else // 处于发布阶段

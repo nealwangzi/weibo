@@ -13,6 +13,7 @@
 		181982071B99EFF60009AC79 /* NYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982061B99EFF60009AC79 /* NYAccount.m */; };
 		1819820B1B99F6FC0009AC79 /* NYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819820A1B99F6FC0009AC79 /* NYAccountTool.m */; };
 		1819820F1B99FA2B0009AC79 /* UIWindow+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819820E1B99FA2B0009AC79 /* UIWindow+NYExtension.m */; };
+		181982121B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 181982111B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
 		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
@@ -61,6 +62,8 @@
 		1819820A1B99F6FC0009AC79 /* NYAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAccountTool.m; sourceTree = "<group>"; };
 		1819820D1B99FA2B0009AC79 /* UIWindow+NYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+NYExtension.h"; sourceTree = "<group>"; };
 		1819820E1B99FA2B0009AC79 /* UIWindow+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+NYExtension.m"; sourceTree = "<group>"; };
+		181982101B9A014D0009AC79 /* UIBarButtonItem+NYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NYExtension.h"; sourceTree = "<group>"; };
+		181982111B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NYExtension.m"; sourceTree = "<group>"; };
 		189419A51B8F22B7006BF095 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419B51B8F22B7006BF095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -519,6 +522,8 @@
 				18BD85101B9090830040C0CE /* UIView+NYExtension.m */,
 				1819820D1B99FA2B0009AC79 /* UIWindow+NYExtension.h */,
 				1819820E1B99FA2B0009AC79 /* UIWindow+NYExtension.m */,
+				181982101B9A014D0009AC79 /* UIBarButtonItem+NYExtension.h */,
+				181982111B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 				18BD85161B90953A0040C0CE /* NYNavigationController.m in Sources */,
 				18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */,
 				189B04241B99858C00BC57C6 /* NYNewFeatureCell.m in Sources */,
+				181982121B9A014D0009AC79 /* UIBarButtonItem+NYExtension.m in Sources */,
 				189B04181B99806400BC57C6 /* NYPublishViewController.m in Sources */,
 				189B040B1B9976AE00BC57C6 /* NYDropdownMenu.m in Sources */,
 			);

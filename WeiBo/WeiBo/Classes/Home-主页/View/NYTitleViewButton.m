@@ -10,6 +10,17 @@
 
 @implementation NYTitleViewButton
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if ( self = [super initWithFrame:frame]) {
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        [self setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+
+    }
+    return self;
+}
 - (void)layoutSubviews
 {
     [super layoutSubviews];

@@ -50,30 +50,15 @@
 }
 - (void)setupNavBar
 {
-   UIButton *leftButton = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] HighlightedImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"]title:nil];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
-    UIButton *rightButton = [self setupBarButtonWithImage:[UIImage imageNamed:@"navigationbar_pop"] HighlightedImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"]title:nil];
-    [rightButton addTarget:self action:@selector(rightbuttonClick) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-    NYTitleViewButton *titleButtonView = [NYTitleViewButton buttonWithType:UIButtonTypeCustom];
-    [titleButtonView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-   // [titleButtonView setTitle:@"主页" forState:UIControlStateNormal];
-    [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(rightbuttonClick) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(rightbuttonClick) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
+    
+    NYTitleViewButton *titleButtonView = [[NYTitleViewButton alloc]init];
+    NSString *name = [NYAccountTool account].name;
+    [titleButtonView setTitle:name?name:@"首页" forState:UIControlStateNormal];
     [titleButtonView addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchDown];
     self.navigationItem.titleView = titleButtonView;
     self.titleButtonView = titleButtonView;
-}
-- (UIButton *)setupBarButtonWithImage:(UIImage *)image HighlightedImage:(UIImage *)highlightedImage title:(NSString *)titlename
-{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:image forState:UIControlStateNormal];
-    [button setImage:highlightedImage forState:UIControlStateHighlighted];
-    [button setTitle:titlename forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button sizeToFit];
-    return button;
-
 }
 - (void)rightbuttonClick
 {
