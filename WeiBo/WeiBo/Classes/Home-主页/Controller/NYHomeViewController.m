@@ -8,9 +8,11 @@
 
 #import "NYHomeViewController.h"
 #import "NYTitleViewButton.h"
-@interface NYHomeViewController ()
-/* titlebuton */
-@property(nonatomic , weak) UIButton *selTitleButton;
+#import "NYDropdownMenu.h"
+#import "NYDropdownMenuController.h"
+@interface NYHomeViewController ()<NYDropdownMenuDelegate>
+/* titleview */
+@property(nonatomic , weak) NYTitleViewButton *titleButtonView;
 
 @end
 
@@ -33,8 +35,8 @@
     [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
     [titleButtonView setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
     [titleButtonView addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchDown];
-    
     self.navigationItem.titleView = titleButtonView;
+    self.titleButtonView = titleButtonView;
 }
 - (UIButton *)setupBarButtonWithImage:(UIImage *)image HighlightedImage:(UIImage *)highlightedImage title:(NSString *)titlename
 {
@@ -56,6 +58,20 @@
 - (void)titleButtonClick:(UIButton *)button
 {
     button.selected = !button.selected;
+    
+    NYDropdownMenu *popmenu = [NYDropdownMenu dropdownMenu];
+    popmenu.delegate = self;
+    NYDropdownMenuController *dropdownMenuVc = [[NYDropdownMenuController alloc]init];
+    dropdownMenuVc.view.width= 150;
+    dropdownMenuVc.view.height = 150;
+    popmenu.contentViewController = dropdownMenuVc;
+    [popmenu showFrom:button];
+
+    
+}
+- (void)disMissdropdownMenu:(NYDropdownMenu *)dropdowmenu
+{
+    self.titleButtonView.selected = !self.titleButtonView.selected;
 }
 #pragma mark - Table view data source
 
