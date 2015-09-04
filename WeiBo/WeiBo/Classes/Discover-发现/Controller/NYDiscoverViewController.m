@@ -7,8 +7,8 @@
 //
 
 #import "NYDiscoverViewController.h"
-
-@interface NYDiscoverViewController ()
+#import "NYSearchBar.h"
+@interface NYDiscoverViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -16,22 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupNav];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNav
+{
+    NYSearchBar *searchbar = [NYSearchBar searchBar];
+    searchbar.width = 300;
+    searchbar.height = 30;
+    searchbar.delegate = self;
+    self.navigationItem.titleView = searchbar;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"%s",__func__);
 }
-*/
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"%s,%@",__func__,textField.text);
+    [self.view endEditing:YES];
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

@@ -10,6 +10,7 @@
 		180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 180575A21B91C577006C305C /* NYTitleViewButton.m */; };
 		189419B61B8F22B7006BF095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189419B51B8F22B7006BF095 /* Images.xcassets */; };
 		189419C51B8F22B7006BF095 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189419C41B8F22B7006BF095 /* WeiBoTests.m */; };
+		189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B04071B99730700BC57C6 /* NYSearchBar.m */; };
 		18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */; };
 		18BD85021B908C590040C0CE /* NYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84E71B908C590040C0CE /* NYHomeViewController.m */; };
 		18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD84ED1B908C590040C0CE /* NYTabBarController.m */; };
@@ -42,6 +43,8 @@
 		189419BE1B8F22B7006BF095 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189419C31B8F22B7006BF095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189419C41B8F22B7006BF095 /* WeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiBoTests.m; sourceTree = "<group>"; };
+		189B04061B99730700BC57C6 /* NYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSearchBar.h; sourceTree = "<group>"; };
+		189B04071B99730700BC57C6 /* NYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSearchBar.m; sourceTree = "<group>"; };
 		18BD84E01B908C590040C0CE /* NYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYDiscoverViewController.h; sourceTree = "<group>"; };
 		18BD84E11B908C590040C0CE /* NYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYDiscoverViewController.m; sourceTree = "<group>"; };
 		18BD84E61B908C590040C0CE /* NYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYHomeViewController.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				18BD850B1B908EA40040C0CE /* NYTabBar.h */,
 				18BD850C1B908EA40040C0CE /* NYTabBar.m */,
+				189B04061B99730700BC57C6 /* NYSearchBar.h */,
+				189B04071B99730700BC57C6 /* NYSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				18BD85031B908C590040C0CE /* NYTabBarController.m in Sources */,
 				18BD85081B908C590040C0CE /* NYProfileViewController.m in Sources */,
 				18BD85011B908C590040C0CE /* NYDiscoverViewController.m in Sources */,
+				189B04081B99730700BC57C6 /* NYSearchBar.m in Sources */,
 				180575A31B91C577006C305C /* NYTitleViewButton.m in Sources */,
 				18BD85051B908C590040C0CE /* AppDelegate.m in Sources */,
 				18BD85111B9090830040C0CE /* UIView+NYExtension.m in Sources */,
